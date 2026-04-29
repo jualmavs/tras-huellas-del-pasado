@@ -1,0 +1,33 @@
+# Dependencias
+node_modules
+
+# Build de producción
+dist
+
+# Cache
+.vite
+.cache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variables de entorno privadas
+.env
+.env.local
+.env.*.local
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Archivos temporales
+*.tmp
+*.temp

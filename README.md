@@ -8,7 +8,7 @@ Proyecto liderado por la docente **María Alejandra Alzate Toro** y desarrollado
 
 ## 🌐 Live Demo
 
-🔗 https://cerritos-memoriaviva.netlify.app/
+🔗 https://cerritos-memoriaviva.vercel.app/
 
 ---
 

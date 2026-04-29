@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   Google Fonts are loaded via index.html
+   ───────────────────────────────────────────── */
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #EDE5D0; }
+::-webkit-scrollbar-thumb { background: #8B6914; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #D4890A; }
+
+/* ─── Base resets ─── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: #F7F2E8;
+  color: #1E130A;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ─── Paper grain overlay ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── Selection colour ─── */
+::selection { background: #D4890A30; color: #1E130A; }
+
+/* ─── Utility classes ─── */
+@layer utilities {
+  .text-shadow-warm {
+    text-shadow: 0 2px 20px rgba(139, 105, 20, 0.3);
+  }
+  .text-shadow-sm {
+    text-shadow: 0 1px 8px rgba(30, 19, 10, 0.2);
+  }
+  .gradient-ink {
+    background: linear-gradient(135deg, #1E130A 0%, #3D2B1A 100%);
+  }
+  .gradient-amber {
+    background: linear-gradient(135deg, #D4890A 0%, #C9A84C 100%);
+  }
+  .gradient-paper {
+    background: linear-gradient(180deg, #F7F2E8 0%, #EDE5D0 50%, #DDD0B0 100%);
+  }
+  .border-sepia {
+    border-color: rgba(139, 105, 20, 0.25);
+  }
+  .mask-fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
+
+/* ─── Section transitions ─── */
+.section-enter {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.section-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* ─── Ornamental divider ─── */
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '✦';
+  color: #8B6914;
+  font-size: 10px;
+  margin: 0 12px;
+}
+
+/* ─── Quote styling ─── */
+.quote-mark {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 5rem;
+  line-height: 0;
+  vertical-align: -0.4em;
+  color: #D4890A;
+  opacity: 0.5;
+  user-select: none;
+}
+
+/* ─── Locomotive animation ─── */
+@keyframes trainTraverse {
+  0%   { transform: translateX(-500px) scaleX(-1); }
+  100% { transform: translateX(calc(100vw + 500px)) scaleX(-1); }
+}
+@keyframes smokePuff {
+  0%   { opacity: 0.6; transform: translate(0, 0) scale(0.4); }
+  100% { opacity: 0;   transform: translate(-20px, -50px) scale(2); }
+}
+@keyframes railShimmer {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1;   }
+}
+
+.train-svg {
+  animation: trainTraverse 26s linear infinite;
+  transform-origin: left center;
+}
+.smoke-1   { animation: smokePuff 2.2s ease-out infinite; }
+.smoke-2   { animation: smokePuff 2.2s ease-out infinite 0.7s; }
+.smoke-3   { animation: smokePuff 2.2s ease-out infinite 1.4s; }
+
+/* ─── Focus visible ─── */
+:focus-visible {
+  outline: 2px solid #D4890A;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

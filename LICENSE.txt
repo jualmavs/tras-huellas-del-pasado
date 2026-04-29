@@ -1,0 +1,34 @@
+Copyright (c) 2026-present Juan Manuel Arbeláez Alzate.
+Todos los derechos reservados.
+
+LICENCIA PROPIETARIA / PROPRIETARY LICENSE
+
+Este software, incluyendo, sin limitarse a ello, su código fuente, estructura,
+arquitectura, diseño, documentación, recursos, archivos y cualquier obra derivada
+o material relacionado, es propiedad exclusiva de Juan Manuel Arbeláez Alzate.
+
+No se concede ningún permiso, licencia ni autorización, expresa o implícita, para
+copiar, modificar, adaptar, fusionar, publicar, distribuir, sublicenciar, vender,
+alquilar, prestar, reproducir, descompilar, realizar ingeniería inversa, extraer,
+traducir, crear obras derivadas o explotar este software, total o parcialmente,
+sin autorización previa, expresa y por escrito del titular.
+
+The mere presence of this repository on GitHub does not grant any right to use,
+copy, modify, distribute, or exploit the code or any related material.
+Viewing, cloning, or forking this repository does not transfer ownership or grant
+a license, except where the law expressly requires otherwise.
+
+Cualquier uso autorizado deberá constar por escrito y firmado por el titular.
+
+Este software se proporciona “tal cual”, sin garantías de ningún tipo, expresas
+o implícitas, incluyendo, sin limitarse a ellas, garantías de comerciabilidad,
+idoneidad para un propósito particular, no infracción y ausencia de errores.
+
+En caso de conflicto entre esta licencia y cualquier otro texto publicado junto
+al proyecto, prevalecerá este archivo LICENSE.txt, salvo norma legal aplicable en
+contrario.
+
+Titular: Juan Manuel Arbeláez Alzate
+Contacto para permisos: juanmanuel.arbelaez@gmail.com
+Lugar: Colombia
+Fecha: 2026
